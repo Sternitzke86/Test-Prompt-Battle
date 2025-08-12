@@ -362,7 +362,7 @@ footer {
     gap: 20px;
 }
 .logo-container .logo {
-    height: 80px;
+    height: 60px;
 }
 
 .generated-image {
@@ -380,6 +380,6 @@ footer {
   margin-bottom: 1rem;
 }
 .logo-bar .logo {
-  height: 80px; /* gleiche Höhe für beide Logos */
+  height: 60px; /* gleiche Höhe für beide Logos */
   width: auto;
 }
