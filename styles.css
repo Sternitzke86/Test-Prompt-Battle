@@ -55,7 +55,7 @@ body {
 }
 
 /* Untertitel für die zweite Zeile der Überschrift */
-/* Die Unterüberschrift „Kann KI Kunst?“ ist doppelt so groß wie der Titel
+/* Die Unterüberschrift „Kann KI Kunst?" ist doppelt so groß wie der Titel
    und wird weiß dargestellt. */
 .subtitle {
   font-size: 6rem;
@@ -118,7 +118,7 @@ body {
 
 .input-area input {
   flex: 1;
-  /* Gleiche Schriftgröße wie der Untertitel „Kann KI Kunst?“ */
+  /* Gleiche Schriftgröße wie der Untertitel „Kann KI Kunst?" */
   font-size: 6rem;
   padding: 1rem;
   border: none;
@@ -271,7 +271,6 @@ footer {
   border-radius: 0;
 }
 
-
 /* Nachrichtenliste: Dieser Bereich sammelt alle abgeschickten Prompts und
    die dazugehörigen generierten Bilder. Er wächst dynamisch und ist
    scrollbar, falls der Inhalt den verfügbaren Platz übersteigt. */
@@ -303,6 +302,23 @@ footer {
   height: auto;
   border-radius: 12px;
   cursor: pointer;
+}
+
+/* Download‑Button unter dem generierten Bild */
+.download-btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 3rem;
+  border: none;
+  border-radius: 8px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.download-btn:hover {
+  opacity: 0.8;
 }
 
 /*
@@ -372,14 +388,24 @@ footer {
     box-sizing: border-box;
 }
 
-/* Zwei Logos nebeneinander links oben */
+/* VERBESSERT: Zwei Logos nebeneinander links oben - beide gleich groß */
 .logo-bar {
   display: flex;
   align-items: center;
   gap: 20px;
   margin-bottom: 1rem;
 }
+
 .logo-bar .logo {
-  height: 60px; /* gleiche Höhe für beide Logos */
-  width: auto;
+  /* Beide Logos haben jetzt die gleiche Höhe - orientiert sich am größeren Logo */
+  height: 120px; /* Erhöht von 80px auf 120px für bessere Sichtbarkeit */
+  width: auto; /* Automatische Breite, um das Seitenverhältnis beizubehalten */
+  /* Zusätzliche Einstellungen für bessere Darstellung */
+  object-fit: contain; /* Stellt sicher, dass das Logo nicht verzerrt wird */
+}
+
+/* Spezielle Behandlung für das SMS-Logo falls es anders skaliert werden muss */
+.logo-bar .logo:last-child {
+  /* Falls das SMS-Logo spezielle Behandlung braucht, kann hier angepasst werden */
+  height: 120px; /* Gleiche Höhe wie das andere Logo */
 }
